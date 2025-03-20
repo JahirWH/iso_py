@@ -1,0 +1,10 @@
+#!/bin/sh
+export PATH=/usr/bin:$PATH
+export LD_LIBRARY_PATH=/usr/lib
+
+mount -t proc proc /proc
+mount -t sysfs sys /sys
+mount -o remount,rw /
+
+# Ejecutar Python con la ruta correcta
+exec /usr/bin/python3/python3.12 /home/adata3.py || exec sh

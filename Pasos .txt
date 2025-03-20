@@ -1,0 +1,15 @@
+
+Pasos que segui para ejecutar y comprimir ls gz
+~/my_os/initrd$ find . | cpio -o -H newc | gzip -9 > ../iso/boot/initrd.gz
+ 
+ aceder a la ruta en la cual esta todo, en mi caso es /initrd
+ encuentra lo que esta en la carpeta y lo comprime
+
+
+ para hacerr la iso utilizamos grub-mrkescue 
+ grub-mkrescue -o /home/ahir/my_os/mycustom.iso /home/ahir/my_os/iso/
+
+
+
+y tulilizo quemu para visualizar la iso, puede ser otro como virtualbox en windows 
+~/my_os$ qemu-system-i386 -cdrom mycustom.iso -m 512
