@@ -11,6 +11,7 @@ void print(const char *str) {
 
 // Función principal del kernel
 void kernel_main(void) {
+    print("Sistema operativo minimalista cargado.\n");
     print("Cargando Python...\n");
 
     // Aquí se debería cargar un intérprete de Python
